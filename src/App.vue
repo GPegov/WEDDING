@@ -1,30 +1,66 @@
 <template>
-  <nav>
-    <router-link to="/">Home</router-link> |
-    <router-link to="/about">About</router-link>
-  </nav>
-  <router-view/>
+<div class="app">
+    <h2></h2>
+    <h4></h4>
+    <div class="guestNames">
+        <form>
+            <input class="input" type="text" placeholder="Имя">
+            <input class="input" type="text" placeholder="Фамилия">
+            <button class="btn" @click="addGuest">Добавить гостя</button>
+        </form>
+    </div>
+</div>
 </template>
 
+
+<script>
+export default {
+    data() {
+        return{
+            guests
+        }
+    }
+}
+
+</script>
+
+
 <style>
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
-
-nav {
-  padding: 30px;
+.app {
+    padding: 20px;
 }
-
-nav a {
-  font-weight: bold;
-  color: #2c3e50;
+.guestNames {
+    width: 20%;
+    min-width: 200px;
+    
 }
+.input {
+    width: 100%;
+    border: 1px solid rgb(181, 39, 252);
+    padding: 10px 15px;
+    margin-top: 10px;
+    border-radius: 12px;
+}
+.btn {
+    width: 50%;
+    border: 1px solid rgb(181, 39, 252);
+    padding: 10px 15px;
+    margin-top: 20px;
+    align-self: flex-end;
+    background: none;
+    color: rgb(181, 39, 252);
+    border-radius: 12px;
 
-nav a.router-link-exact-active {
-  color: #42b983;
+
+}
+form {
+    display: flex;
+    flex-direction: column;
 }
 </style>
+
